@@ -1,3 +1,26 @@
+# Required libraries.
+import pandas as pd
+import numpy as np
+import os
+import pickle
+import urllib
+from bs4 import BeautifulSoup as soup
+from urllib.request import urlopen as uReq
+import time
+import random
+import math
+import nltk
+from nltk.tokenize import RegexpTokenizer
+import glob
+from itertools import islice
+from textblob import TextBlob
+os.chdir("/Users/floraor/Desktop/Insights")
+from stop_words import get_stop_words
+from nltk.stem.porter import PorterStemmer
+from gensim import corpora, models
+import gensim
+import streamlit as st
+
 st.title('Find My Therapist')
 
 df=pd.read_csv("zocdoc_01232020.csv")
