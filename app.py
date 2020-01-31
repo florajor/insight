@@ -1,2 +1,4 @@
 import streamlit as st
-st.title("Find My therapist")
+
+st.header("Therapal")
+st.markdown("Getting to know your therapist before scheduling an appointment")
