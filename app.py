@@ -22,7 +22,9 @@ option_3 = st.multiselect('Types of therapies (Select All)',
 ('group','psychoanalytic','psychotherapy','medication','couple','psychiatry'))
 st.write('You selected:', option_3)
 
-user_input=str(option_1 + option_2 + option_3)
+user_input = ""
+input=option_1 + option_2 + option_3
+user_input.join(input) 
 
 #load user_df, dfr, matrix and therapist_bio
 user_df = pd.read_csv('user_blank.csv')
