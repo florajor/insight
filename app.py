@@ -59,8 +59,8 @@ if st.button('Submit'):
 
 #pull therapist from the respective cluster
     def top_therapist(cluster, top_n=3, df=matrix):
-    name_list = df.sort_values(cluster, ascending=False)[:top_n].index.tolist()
-    return name_list
+        name_list = df.sort_values(cluster, ascending=False)[:top_n].index.tolist()
+        return name_list
     therapist = top_therapist(cluster) #list of therapist
     result = bio.loc[therapist,:] #df
 
