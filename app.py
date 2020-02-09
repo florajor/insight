@@ -40,31 +40,32 @@ bio = pd.read_csv('therapist_bio.csv')
 bio.set_index('Provider')
 
 #fill in 1 based on user input
-for word in user_input:
-    user_df[word] = 1
+if st.button('Submit'):
+    for word in user_input:
+        user_df[word] = 1
 
 #append user_df with topic words to compare
 
-compare = pd.concat([dfr, user_df])
+    compare = pd.concat([dfr, user_df])
 
 #compute cosine similarity
-sim = cosine_similarity(compare.to_numpy())
-df_sim = pd.DataFrame(data=sim,
+    sim = cosine_similarity(compare.to_numpy())
+    df_sim = pd.DataFrame(data=sim,
                       index=compare.index.tolist(),
                       columns=compare.index.tolist())
 
 #get the cluster number
-cluster = str(df_sim[df_sim.user == df_sim.user[:-1].max()].index[0]) #str
+    cluster = str(df_sim[df_sim.user == df_sim.user[:-1].max()].index[0]) #str
 
 #pull therapist from the respective cluster
-def top_therapist(cluster, top_n=3, df=matrix):
+    def top_therapist(cluster, top_n=3, df=matrix):
     name_list = df.sort_values(cluster, ascending=False)[:top_n].index.tolist()
     return name_list
-therapist = top_therapist(cluster) #list of therapist
-result = bio.loc[therapist,:] #df
+    therapist = top_therapist(cluster) #list of therapist
+    result = bio.loc[therapist,:] #df
 
 # reindex result DataFrame
-result = result.reset_index(drop=True)
+    result = result.reset_index(drop=True)
 
 
 #result[['Location', 'Insurance']] #df
@@ -72,8 +73,8 @@ result = result.reset_index(drop=True)
 #print(result['Provider'][0])
 
 #display the results
-for i in range(3):
-    provider = result['Provider'][i]
-    location = result['Location'][i]
-    insurance = result['Insurance'][i]
-    st.write(f'Provider: {provider}\nLocation: {location}\nInsurance: {insurance}\n')
+    for i in range(3):
+        provider = result['Provider'][i]
+        location = result['Location'][i]
+        insurance = result['Insurance'][i]
+        st.write(f'Provider: {provider}\nLocation: {location}\nInsurance: {insurance}\n')
