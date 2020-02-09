@@ -30,14 +30,6 @@ st.write('You selected:', option_3)
 
 user_input = option_2 + option_3
 
-'''
-user_input = ""
-input=option_1 + option_2 + option_3
-user_input.join(input)
-print('debug')
-print(user_input)
-'''
-
 #load user_df, dfr, matrix and therapist_bio
 user_df = pd.read_csv('user_blank.csv')
 user_df.rename(index={0: 'user'}, inplace=True)
