@@ -87,3 +87,5 @@ if st.button('Submit'):
         st.write(f'Best Review: {best_review}')
         st.write(f'Worst Review: {worst_review}')
         #st.write(link)
+   
+    st.write("For more details of this App: https://docs.google.com/presentation/d/14178c-sBdqRtUsCGxw0L6s8OZPXFeYMU16gKXDWiLrA/edit?usp=sharing")
