@@ -36,7 +36,7 @@ user_df.rename(index={0: 'user'}, inplace=True)
 dfr = pd.read_csv('topic_words.csv', index_col=[0])
 matrix = pd.read_csv('topic_matrix.csv')
 matrix.set_index('Provider')
-bio = pd.read_csv('therapist_bio_1.csv')
+bio = pd.read_csv('therapist_bio_test.csv')
 bio.set_index('Provider')
 
 #fill in 1 based on user input
