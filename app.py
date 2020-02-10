@@ -77,4 +77,9 @@ if st.button('Submit'):
         provider = result['Provider'][i]
         location = result['Location'][i]
         insurance = result['Insurance'][i]
-        st.write(f'Provider: {provider}\nLocation: {location}\nInsurance: {insurance}\n')
+        #st.write(f'Provider: {provider}\nLocation: {location}\nInsurance: {insurance}\n')
+        #st.subheader(f'Day {i+1} : {recipe}')
+        st.subheader(f'Provider: {provider}')
+        st.subheader(f'Location: {location}')
+        st.write(f'Insurance: {insurance}')
+        #st.write(link)
