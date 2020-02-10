@@ -77,6 +77,8 @@ if st.button('Submit'):
         provider = result['Provider'][i]
         location = result['Location'][i]
         insurance = result['Insurance'][i]
+        best_review = result['Best Review'][i]
+        worst_review = result['Worst Review'][i]
         #st.write(f'Provider: {provider}\nLocation: {location}\nInsurance: {insurance}\n')
         #st.subheader(f'Day {i+1} : {recipe}')
         st.subheader(f'Provider: {provider}')
