@@ -20,12 +20,12 @@ st.markdown("Getting to know your therapist before scheduling an appointment")
 #make multiselect checkboxes
 option_2 = st.multiselect('Which of the following are you struggling with? (Select All)',
 ('sleep', 'bipolar', 'stress',
-'depression', 'anxiety', 'relationship', 'anxiety' ))
-st.write('You selected:', option_2)
+'depression', 'anxiety', 'relationship'))
+#st.write('You selected:', option_2)
 
 option_3 = st.multiselect('Types of therapies (Select All)',
 ('group','psychoanalytic','psychotherapy','medication','couple','psychiatry'))
-st.write('You selected:', option_3)
+#st.write('You selected:', option_3)
 
 
 user_input = option_2 + option_3
