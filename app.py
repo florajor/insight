@@ -36,7 +36,7 @@ user_df.rename(index={0: 'user'}, inplace=True)
 dfr = pd.read_csv('topic_words.csv', index_col=[0])
 matrix = pd.read_csv('topic_matrix.csv')
 matrix.set_index('Provider')
-bio = pd.read_csv('therapist_bio_02102020.csv')
+bio = pd.read_csv('therapist_bio_02172020.csv')
 bio.set_index('Provider')
 
 #fill in 1 based on user input
@@ -76,13 +76,15 @@ if st.button('Submit'):
     for i in range(3):
         provider = result['Provider'][i]
         location = result['Location'][i]
+        phone = result['Phone'][i]
         insurance = result['Insurance'][i]
         best_review = result['best_review'][i]
         worst_review = result['worst_review'][i]
         #st.write(f'Provider: {provider}\nLocation: {location}\nInsurance: {insurance}\n')
         #st.subheader(f'Day {i+1} : {recipe}')
         st.subheader(f'Provider: {provider}')
-        st.subheader(f'Location: {location}')
+        st.write(f'Location: {location}')
+        st.write(f'Phone: {phone}')
         st.write(f'Insurance: {insurance}')
         st.write(f'Best Review: {best_review}')
         st.write(f'Worst Review: {worst_review}')
