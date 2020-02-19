@@ -15,10 +15,10 @@ In TheraPal_LDA.ipynb, I used Gensim to conduct Latent Dirichlet Allocation (LDA
 ## Recommender
 App.py contains a content-based recommender that compares the key words of the clinicians expertise (stored in topic_words.csv and topic_matrix.csv) with the app user input of their needs (stored in user_blank.csv) using cosine similarity. 
 
-##References
+## References
 https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0
 https://towardsdatascience.com/how-to-build-from-scratch-a-content-based-movie-recommender-with-natural-language-processing-25ad400eb243
 
-##Credit
+## Credit
 Special thanks to Yang Li on the step-by-step guide in her project that used similiar approaches:
 https://github.com/yangli53/happy_meals
